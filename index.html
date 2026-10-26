@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cordiq</title>
-    <meta name="description" content="cordiq reads the heart from the signal itself. Twelve leads in, clinical measurements out, with an honest error bar.">
+    <title>menvi</title>
+    <meta name="description" content="menvi reads the heart from the signal itself. Twelve leads in, clinical measurements out, with an honest error bar.">
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='120 220 784 584'%3E%3Cdefs%3E%3Cmask id='m'%3E%3Crect x='0' y='0' width='1024' height='1024' fill='%23fff'/%3E%3Ccircle cx='512' cy='465' r='248' fill='%23000'/%3E%3C/mask%3E%3C/defs%3E%3Ccircle cx='274.7' cy='648.5' r='140' fill='%231d1d1f' mask='url(%23m)'/%3E%3Ccircle cx='749.3' cy='648.5' r='140' fill='%231d1d1f' mask='url(%23m)'/%3E%3Ccircle cx='512' cy='465' r='230' fill='%230071e3'/%3E%3C/svg%3E">
@@ -675,7 +675,7 @@
 
     <nav class="nav" id="nav" aria-label="Primary">
         <div class="nav-inner">
-            <a href="#top" class="wordmark" aria-label="cordiq home">cord<span class="i">i</span>q</a>
+            <a href="#top" class="wordmark" aria-label="menvi home">menv<span class="i">i</span></a>
             <ul class="nav-links">
                 <li><a href="#mission">Mission</a></li>
                 <li><a href="#readout">Readout</a></li>
@@ -694,7 +694,7 @@
     <main id="top">
 
         <section class="hero">
-            <h1 class="wordmark reveal" aria-label="cordiq">cord<span class="i">i</span>q</h1>
+            <h1 class="wordmark reveal" aria-label="menvi">menv<span class="i">i</span></h1>
             <p class="hero-tagline reveal">Reading the heart from the signal itself. <em>Twelve leads in, clinical measurements out, each with an honest error bar.</em></p>
             <div class="hero-actions reveal">
                 <a href="#signal" class="btn btn-primary">Try the signal lab
@@ -715,7 +715,7 @@
                 Most ECG AI starts from a picture of the trace. Ours used to, too: every recording was drawn onto a page and a decoder was trained to put the waveform back. That cost a renderer, a throwaway decoder, and up to half a pixel of rounding on every edge.
             </p>
             <p class="lede reveal">
-                <strong>So we removed the picture.</strong> The cordiq encoder reads the raw 12-lead signal, exactly as the monitor records it, and turns it into a compact representation that a language model can reason over. No rendering, no reconstruction, nothing drawn.
+                <strong>So we removed the picture.</strong> The menvi encoder reads the raw 12-lead signal, exactly as the monitor records it, and turns it into a compact representation that a language model can reason over. No rendering, no reconstruction, nothing drawn.
             </p>
 
             <div class="stats">
@@ -862,8 +862,8 @@
     </main>
 
     <footer>
-        <span class="wordmark">cord<span class="i">i</span>q</span>
-        <span>&copy; 2026 cordiq. Built for the bedside monitor.</span>
+        <span class="wordmark">menv<span class="i">i</span></span>
+        <span>&copy; 2026 menvi. Built for the bedside monitor.</span>
     </footer>
 
     <script>
@@ -917,7 +917,7 @@
             // Theme toggle (remembered per browser)
             const root = document.documentElement;
             try {
-                const saved = localStorage.getItem('cordiq-theme');
+                const saved = localStorage.getItem('menvi-theme');
                 if (saved) root.dataset.theme = saved;
             } catch (e) {}
             document.getElementById('themeToggle').addEventListener('click', () => {
@@ -925,7 +925,7 @@
                     ? root.dataset.theme === 'dark'
                     : window.matchMedia('(prefers-color-scheme: dark)').matches;
                 root.dataset.theme = dark ? 'light' : 'dark';
-                try { localStorage.setItem('cordiq-theme', root.dataset.theme); } catch (e) {}
+                try { localStorage.setItem('menvi-theme', root.dataset.theme); } catch (e) {}
             });
 
             // Nav border + active section
